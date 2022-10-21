@@ -1,4 +1,5 @@
 # Samples
 
-[Fetch](https://github.com/ironyhouse/js-samples/fetch)
-[XMLHttpRequest](https://github.com/ironyhouse/js-samples/xmlhttprequest)
+[Fetch](https://github.com/ironyhouse/js-samples/blob/master/Fetch/index.js)
+
+[XMLHttpRequest](https://github.com/ironyhouse/js-samples/blob/master/xmlhttprequest/index.js)
