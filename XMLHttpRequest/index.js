@@ -1,12 +1,12 @@
 /*
  * XMLHttpRequest
  */
-const URL = 'https://jsonplaceholder.typicode.com/posts';
+const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 
 const XHR = new XMLHttpRequest();
 
 // initializes a request
-XHR.open('GET', URL);
+XHR.open('GET', POSTS_URL);
 
 XHR.responseType = 'json';
 
@@ -26,11 +26,11 @@ XHR.send();
 /*
  * XMLHttpRequest with Promise
  */
-function sendXMLHttpRequest(method, URL, body = null) {
+function sendXMLHttpRequest(method, POSTS_URL, body = null) {
   return new Promise((resolve, reject) => {
     const XHR = new XMLHttpRequest();
 
-    XHR.open(method, URL);
+    XHR.open(method, POSTS_URL);
 
     XHR.responseType = 'json';
     XHR.setRequestHeader('Content-Type', 'application/json');
@@ -48,12 +48,12 @@ function sendXMLHttpRequest(method, URL, body = null) {
 }
 
 // GET
-sendXMLHttpRequest('GET', URL)
+sendXMLHttpRequest('GET', POSTS_URL)
   .then((data) => console.log(data))
   .catch((error) => console.log(error));
 
 // POST
-sendXMLHttpRequest('POST', URL, {
+sendXMLHttpRequest('POST', POSTS_URL, {
   name: 'Artsiom',
 })
   .then((data) => console.log(data))

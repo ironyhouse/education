@@ -1,9 +1,9 @@
 /*
  * Fetch
  */
-const URL = 'https://jsonplaceholder.typicode.com/posts';
+const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 
-function sendFetchRequest(method, URL, body = null) {
+function sendFetchRequest(method, POSTS_URL, body = null) {
   let headers = {
     'Content-Type': 'application/json',
   };
@@ -15,26 +15,40 @@ function sendFetchRequest(method, URL, body = null) {
 
   // POST
   if (body) {
-    return fetch(URL, parameters).then((response) => {
+    return fetch(POSTS_URL, parameters).then((response) => {
       return response.json();
     });
   }
 
   // GET
-  return fetch(URL).then((response) => {
+  return fetch(POSTS_URL).then((response) => {
     // return response.text();
     return response.json();
   });
 }
 
 // GET
-sendFetchRequest('GET', URL)
+sendFetchRequest('GET', POSTS_URL)
   .then((data) => console.log(data))
   .catch((error) => console.log(error));
 
 // POST
-sendFetchRequest('POST', URL, {
+sendFetchRequest('POST', POSTS_URL, {
   name: 'Artsiom',
 })
   .then((data) => console.log(data))
   .catch((error) => console.log(error));
+
+/*
+ * XMLHttpRequest with async/await
+ */
+async function sendAsyncFetchRequest(POSTS_URL) {
+  try {
+    const response = await fetch(POSTS_URL);
+    return response.json();
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+sendAsyncFetchRequest(POSTS_URL).then(response => console.log(response))
