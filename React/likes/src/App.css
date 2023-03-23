@@ -9,13 +9,9 @@
   margin: 20px auto;
 }
 
-.App button {
-  margin: 30px;
-}
-
 .button {
   color: black;
-  margin: 10px;
+  margin: 30px;
   padding: 10px;
   border: transparent;
   border-radius: 50px;
