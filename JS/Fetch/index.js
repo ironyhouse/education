@@ -13,7 +13,7 @@ function sendFetchRequest(method, POSTS_URL, body = null) {
     headers: headers,
   };
 
-  // POST
+  // POST, PUT, PATCH, DELETE
   if (body) {
     return fetch(POSTS_URL, parameters).then((response) => {
       return response.json();

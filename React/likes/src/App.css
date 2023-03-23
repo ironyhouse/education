@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.App img {
+  display: block;
+  height: 400px;
+  width: 400px;
+  margin: 20px auto;
+}
+
+.App button {
+  margin: 30px;
+}
+
+.button {
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  border: transparent;
+  border-radius: 50px;
+  background: transparent;
+  box-shadow: 0px 0px 10px black;
+}
+.like {
+  background: green;
+}
+.dislike {
+  background: red;
+}
